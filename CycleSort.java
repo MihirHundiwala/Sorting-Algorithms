@@ -25,7 +25,7 @@ public class CycleSort {
             int value = arr[i];
             int index = value-1;
             //swap
-            if(arr[i] != arr[index]){
+            if(index<n  &&  arr[i]!=arr[index]){
                 int temp = arr[index];
                 arr[index] = value;
                 arr[i] = temp;
