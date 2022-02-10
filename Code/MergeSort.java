@@ -2,6 +2,19 @@ package Code;
 import java.util.Arrays;
 
 class MergeSort{
+
+    /*
+        Divide and Conquer technique
+
+        -> Time Complexity : O(nlogn)
+        -> Space Complexity : O(n)
+                            : it is not O(nlogn) because we are doing depth first search, i.e,
+                              we always fully expand only one branch at a time thus the stack is
+                              bounded by O(n)
+        -> Inplace? Yes (in this implementation)
+        -> Stable? Yes (in this implementation)
+    */
+
     public static void merge(int[] arr, int start, int mid, int end) {
         int[] merged = new int[end-start];
         int i = start;
@@ -9,6 +22,7 @@ class MergeSort{
         int k = 0;
         // Fill merged array with smaller elements first
         while(i<mid && j<end){
+            // if the below condition is 'arr[i]<arr[j]' then the algo is unstable
             if(arr[i]<=arr[j]){
                 merged[k] = arr[i];
                 i++;k++;
