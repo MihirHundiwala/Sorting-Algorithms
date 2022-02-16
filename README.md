@@ -12,3 +12,4 @@
 <li>Heap</li>
 <li>Quick</li>
 <li>Merge</li>
+<li>Counting</li>
